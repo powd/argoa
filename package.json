@@ -9,6 +9,7 @@
     "test": "jest"
   },
   "workspaces": [
+    "apps/frontend-server",
     "shared/generate-id",
     "shared/utils",
     "modules/users",
