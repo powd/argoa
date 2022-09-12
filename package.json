@@ -8,8 +8,6 @@
     "test": "jest"
   },
   "author": "powd",
-  "private": false,
-  "license": "MIT",
   "jest": {
     "moduleFileExtensions": [
       "js",
