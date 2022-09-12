@@ -1,0 +1,8 @@
+{
+  "name": "argoa-generate-id",
+  "version": "1.0.0",
+  "description": "Generate-id module",
+  "scripts": {
+    "test": "jest"
+  }
+}

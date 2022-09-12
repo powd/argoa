@@ -1,0 +1,11 @@
+{
+  "name": "argoa-utils",
+  "version": "1.0.0",
+  "description": "Utils module",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "@nestjs/common": "^9.0.11"
+  }
+}

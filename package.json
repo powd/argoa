@@ -9,6 +9,8 @@
     "test": "jest"
   },
   "workspaces": [
+    "shared/generate-id",
+    "shared/utils",
     "modules/users",
     "modules/threads"
   ],
