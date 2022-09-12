@@ -1,0 +1,10 @@
+{
+  "name": "argoa-users",
+  "version": "1.0.0",
+  "description": "Users module",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "ts-node src/index.ts",
+    "test": "jest"
+  }
+}
