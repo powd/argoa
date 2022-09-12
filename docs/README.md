@@ -25,3 +25,27 @@ The project is totally experimental.
   - Kind of "inversion of control"? (Try to import/export different, "substituted" modules by configuring different paths for different enviornments/apps)
 
 **It is probably a terrible idea, but why not have some fun with experimentation?**
+
+### Assumptions
+
+- Clean code > libraries > frameworks
+  - Prefer isolating clean code that doesn't drag any dependencies unneccessarily from the rest of stuff
+  - If it it not possible, prefer using library over a framework
+  - If it it not possible, try to "bend" the framework as much as possible
+    - That's why the NextJS app has been "dragged out" from the rest of code into the `apps/frontend-server` directory
+
+## Running unit tests
+
+Normally, Wallaby can be used to keep all the tests being run in the editor (in the background).
+
+This can be also done from the terminal:
+
+```bash
+npm t
+```
+
+Or, to run only the tests from a specific module (instead of `modules`, the prefix might be also `apps`, or `shared` modules - see the `workspaces` sections in the `package.json` file):
+
+```bash
+npm t -w modules/users
+```
