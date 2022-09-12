@@ -33,6 +33,22 @@ The project is totally experimental.
   - If it it not possible, prefer using library over a framework
   - If it it not possible, try to "bend" the framework as much as possible
     - That's why the NextJS app has been "dragged out" from the rest of code into the `apps/frontend-server` directory
+    - This means that frameworks must subordinate to the general rules or override them
+      - Example: global or local `eslintrc`/`prettierc` files
+
+## Running apps
+
+Frontend server:
+
+```bash
+npm run fes:dev
+```
+
+Api server:
+
+```bash
+npm run apis:dev
+```
 
 ## Running unit tests
 

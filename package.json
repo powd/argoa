@@ -6,10 +6,12 @@
   "license": "MIT",
   "scripts": {
     "start:dev": "ts-node src/index.ts",
-    "fes:dev": "npm run dev -w frontend-server",
+    "fes:dev": "npm run dev -w apps/frontend-server",
+    "apis:dev": "npm run start:dev -w apps/api-server",
     "test": "jest"
   },
   "workspaces": [
+    "apps/api-server",
     "apps/frontend-server",
     "shared/generate-id",
     "shared/utils",
