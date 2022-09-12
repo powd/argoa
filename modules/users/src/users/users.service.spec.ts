@@ -1,9 +1,21 @@
+import { User } from './user.entity';
+import { UsersMemoryRepository } from './users-memory.repository';
 import { UsersService } from './users.service';
 
-describe('Greet', () => {
-  it('should greet correctly', () => {
-    const service = new UsersService();
+describe('UsersService', () => {
+  it('should append publicId when creating', async () => {
+    // Given
+    const repository = new UsersMemoryRepository();
+    const service = new UsersService(repository);
 
-    expect(service.createOne()).toBe('test');
+    const user: User = {
+      email: 'some@user.test',
+    };
+
+    // When
+    const createdUser = await service.createOne(user);
+
+    // Then
+    expect(createdUser).toEqual({ publicId: expect.any(String), ...user });
   });
 });
