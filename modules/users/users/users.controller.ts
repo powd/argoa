@@ -1,7 +1,8 @@
 import { Controller, Get } from '@nestjs/common';
+import { UserFindResultDto } from './user-find-result.dto';
 import { UsersService } from './users.service';
 
-@Controller()
+@Controller('/users')
 export class UsersController {
   constructor(private readonly usersService: UsersService) {
     this.usersService.createOne({ email: 'andy@user.test' });
@@ -9,7 +10,7 @@ export class UsersController {
   }
 
   @Get()
-  findMany() {
+  findMany(): Promise<UserFindResultDto[]> {
     return this.usersService.findMany();
   }
 }

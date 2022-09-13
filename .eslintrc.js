@@ -31,6 +31,7 @@ module.exports = {
       'error',
       {
         forbid: ['@nestjs/**/*', '@/**/**/*'],
+        allow: ['@/**/**/next'],
       },
     ],
   },

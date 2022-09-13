@@ -1,6 +1,6 @@
-import type { NextPage } from 'next';
-import { UsersPageComponent } from '@/modules/users';
+import { users } from '@/modules/users/next';
 
-const UsersPage: NextPage = () => <UsersPageComponent />;
+export const { getServerSideProps } = users;
 
+const { UsersPage } = users;
 export default UsersPage;

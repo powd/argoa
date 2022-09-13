@@ -1,4 +1,4 @@
-export class UserFindResult {
+export class UserFindResultDto {
   publicId: string;
   email: string;
 }
