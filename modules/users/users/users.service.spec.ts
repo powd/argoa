@@ -7,7 +7,6 @@ describe('UsersService', () => {
     // Given
     const repository = new UsersMemoryRepository();
     const service = new UsersService(repository);
-
     const user: User = {
       email: 'some@user.test',
     };
@@ -17,5 +16,26 @@ describe('UsersService', () => {
 
     // Then
     expect(createdUser).toEqual({ publicId: expect.any(String), ...user });
+  });
+
+  it('should find all the previously created users', async () => {
+    // Given
+    const repository = new UsersMemoryRepository();
+    const service = new UsersService(repository);
+    const userAmy: User = {
+      email: 'amy@user.test',
+    };
+    const userBob: User = {
+      email: 'bob@user.test',
+    };
+
+    // When
+    const createdUserAmy = await service.createOne(userAmy);
+    const createdUserBob = await service.createOne(userBob);
+
+    // Then
+    const createdUsers = [createdUserAmy, createdUserBob];
+    const foundUsers = await service.findMany();
+    expect(foundUsers).toEqual(createdUsers);
   });
 });

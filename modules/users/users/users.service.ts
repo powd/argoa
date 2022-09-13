@@ -9,4 +9,8 @@ export class UsersService {
   createOne(user: User) {
     return this.usersRepository.createOne(user);
   }
+
+  findMany() {
+    return this.usersRepository.findMany();
+  }
 }
