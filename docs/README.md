@@ -4,6 +4,13 @@ A sandbox project which pretends to be a discussion web application.
 
 The project is totally experimental.
 
+## Iframe test
+
+This is `iframe` test:
+
+<iframe src="https://ebd.cda.pl/620x368/448431a" width="620" height="368" style="border:none;" scrolling="no" allowfullscreen name="v2" allow="encrypted-media"></iframe>
+
+
 ## Aims
 
 - Try a modular approach. **Why?**
